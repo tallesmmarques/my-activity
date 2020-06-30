@@ -18,6 +18,11 @@
   <a href="#how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
+<p>
+    <img alt='Home Screen' src='./home-screen.jpg' width='300'/>
+    <img alt='Add Screen'  src='./add-screen.jpg'  width='300'/>
+</p>
+
 
 
 ## :gear: Technologies
