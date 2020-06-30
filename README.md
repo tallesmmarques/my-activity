@@ -4,21 +4,19 @@
     My Activity
 </h1>
 <p align='center'>
-    <a>
-    	<img alt='stars' src='https://img.shields.io/github/stars/TallesMMarques/my-activity?color=yellow' />
-    </a>
+    <img alt='stars' src='https://img.shields.io/github/stars/TallesMMarques/my-activity?color=yellow' />
     <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/TallesMMarques/my-activity.svg">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/TallesMMarques/my-activity.svg">
-    <a>
-    	<img alt='licence' src='https://img.shields.io/github/license/TallesMMarques/my-activity?color=red' />
-    </a>
+    <img alt='Repo Size' src='https://img.shields.io/github/repo-size/TallesMMarques/my-activity?color=green'/>
+    <img alt='licence' src='https://img.shields.io/github/license/TallesMMarques/my-activity?color=red' />
 </p>
 <p align="center">
   <a href="#gear-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#zaphow-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
-<p>
+
+<p align='center'>
     <img alt='Home Screen' src='./home-screen.jpg' width='300'/>
     <img alt='Add Screen'  src='./add-screen.jpg'  width='300'/>
 </p>
