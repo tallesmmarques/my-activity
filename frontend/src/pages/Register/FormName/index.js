@@ -51,7 +51,7 @@ export default function FormName() {
       <div className={classes.paper}>
         
         <Typography variant="h4">
-          Criar Personagem
+          Add Your Activity 
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit} noValidate>
           <Grid container spacing={2}>
@@ -62,7 +62,7 @@ export default function FormName() {
                 variant="outlined"
                 required
                 fullWidth
-                label="Nome Completo"
+                label="Name"
                 onChange={handleChange}
                 autoFocus
               />
@@ -72,7 +72,7 @@ export default function FormName() {
                 variant="outlined"
                 required
                 fullWidth
-                label="Atividade"
+                label="Activity"
                 name="activity"
                 onChange={handleChange}
               />
@@ -83,7 +83,7 @@ export default function FormName() {
                 required
                 fullWidth
                 name="birth"
-                label="Nascimento"
+                label="Birth"
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -100,7 +100,7 @@ export default function FormName() {
             color="primary"
             className={classes.submit}
           >
-            Criar
+            Submit
           </Button>
           
         </form>

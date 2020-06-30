@@ -35,7 +35,7 @@ function TopBar() {
             <Button
               color='inherit' 
               variant='outlined'
-            >Criar Personagem
+            >add your activity
             </Button>
           } />
           

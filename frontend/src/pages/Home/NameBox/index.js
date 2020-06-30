@@ -67,11 +67,11 @@ export default function NameBox ({id, onRemove,name, activity, birth}) {
                     </IconButton>
                   }
                 title={<Typography variant='h6'>{name}</Typography>}
-                subheader={`${findAge(birth)} anos de idade.`}
+                subheader={`${findAge(birth)} years old.`}
             />
             <CardContent>
                 <Typography variant="body2" >
-                    <b>Atividade: </b>
+                    <b>Activity: </b>
                     {activity}
                 </Typography>
             </CardContent>
