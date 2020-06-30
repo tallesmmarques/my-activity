@@ -3,6 +3,9 @@
     <br/>
     My Activity
 </h1>
+<h4 align="center">
+    Adding and viewing posts using React JS
+</h4>
 <p align='center'>
     <img alt='stars' src='https://img.shields.io/github/stars/TallesMMarques/my-activity?color=yellow' />
     <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/TallesMMarques/my-activity.svg">
