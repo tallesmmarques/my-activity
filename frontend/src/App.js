@@ -1,35 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import api from './services/api';
-import NameBox from './components/nameBox'
-import FormName from './components/formName'
+import React from 'react';
 
-function App() {
-  const [users, setUsers] = useState([])
+import Routes from './routes'
 
-  useEffect(() => { //preencer users
-    api.get('user').then(response => {
-      setUsers(response.data)
-    })
-  }, [])
-
+const App = () => {
   return (
-    <>
-      <div className="names">
-        {users.map(user => 
-          <NameBox 
-            key={user._id}
-            name={user.name}
-            activity={user.activity}
-            birth={user.birth}
-          />
-        )}
-      </div>
-      
-      <div className="createName">
-          <FormName/>
-      </div>
-    </>
-  );
+    <Routes/>
+  )
 }
 
 export default App;
