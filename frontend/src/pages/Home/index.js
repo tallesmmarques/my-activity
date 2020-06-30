@@ -1,34 +1,52 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Box } from '@material-ui/core'
+import { Box, Grid } from '@material-ui/core'
 
 import api from '../../services/api';
 import NameBox from './NameBox'
-import FormName from './FormName'
+import TopBar from '../../components/TopBar'
 
-const Home = () => {
+
+function Home () {
   const [users, setUsers] = useState([])
-
+  const [removed, setRemoved] = useState(0)
+  
   useEffect(() => { //preencer users
     api.get('user').then(response => {
       setUsers(response.data)
+      setRemoved(0)
     })
-  }, [])
+  }, [removed])
 
+  async function handleRemove(itemId) {
+    await api.delete(`user/${itemId}`).then(() => {
+        setRemoved(1)
+    })
+  }
+  
   return (
     <Box className="home">
-      {users.map(user => 
-        <NameBox 
-          key={user._id}
-          name={user.name}
-          activity={user.activity}
-          birth={user.birth}
-        />
-      )}
-
-      <Container>
-        <FormName/>
-      </Container>
-
+      <TopBar/>
+      
+      <Box mt={12}>
+        <Grid
+          item
+          container
+          justify='center'
+          direction='column'
+          alignItems='center'
+        >
+          {users.map(user => 
+            <NameBox 
+              key={user._id}
+              id={user._id}
+              onRemove={handleRemove}
+              name={user.name}
+              activity={user.activity}
+              birth={user.birth}
+            />
+          )}
+        </Grid>
+      </Box>
     </Box>
   );
 }

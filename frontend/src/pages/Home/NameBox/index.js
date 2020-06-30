@@ -6,20 +6,30 @@ import {
     makeStyles, 
     CardHeader, 
     Avatar,
+    IconButton,
 } from '@material-ui/core'
 import { blue } from '@material-ui/core/colors'
+import { Close } from '@material-ui/icons'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 400,
-        margin: 50
+        margin: 10,
+        [theme.breakpoints.down('sm')]: {
+            width: 350
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: 500
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 700
+        }
     },
     avatar: {
-        backgroundColor: blue[500]
+        backgroundColor: blue[700]
     }
-})
+}))
 
-export default function NameBox ({name, activity, birth}) {
+export default function NameBox ({id, onRemove,name, activity, birth}) {
     function findAge (birth) {
         const yearBirth = birth.slice(0,4)
         const mounthBirth = birth.slice(5,7)
@@ -44,18 +54,26 @@ export default function NameBox ({name, activity, birth}) {
     const classes = useStyles()
 
     return (
-        <Card variant="outlined" className={classes.root}>
+        <Card variant="elevation" elevation={3} className={classes.root}>
             <CardHeader
                 avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
                     {getFirstLetter(name)}
                 </Avatar>
                 }
-                title={name}
+                action={
+                    <IconButton onClick={() => onRemove(id)}>
+                      <Close />
+                    </IconButton>
+                  }
+                title={<Typography variant='h6'>{name}</Typography>}
                 subheader={`${findAge(birth)} anos de idade.`}
             />
             <CardContent>
-                <Typography variant="body1" >Atividade: {activity}</Typography>
+                <Typography variant="body2" >
+                    <b>Atividade: </b>
+                    {activity}
+                </Typography>
             </CardContent>
         </Card>
     );
